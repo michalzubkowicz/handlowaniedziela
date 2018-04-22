@@ -5,6 +5,7 @@
     <title>Czy niedziela jest handlowa?</title>
     <meta name="description" content="Strona z informacją o tym czy aktualna niedziela jest handlowa">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+    <link rel="canonical" href="http://handlowaniedziela.com">
     <style>
         body {
             font-family: 'Libre Franklin', sans-serif;
@@ -63,9 +64,22 @@
         document.getElementById('infotext').innerHTML = t;
     }
 
+    var is = dates[currentMonth][currentDay];
+
     setInfoText((dayOfWeek === 0 ? 'Dzisiejsza' : 'Najbliższa') + ' niedziela  ' +
         '(' + currentDay + '.'+ currentMonth + ') ' +
-        '<span style="color:red;">' + (dates[currentMonth][currentDay] ? 'jest' : 'nie jest') + '</span> handlowa');
+        '<span style="color:' + (is ? 'green' : 'red') + ';">' + (is ? 'jest' : 'nie jest') + '</span> handlowa');
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117907329-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117907329-1');
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
 </body>
 </html>
