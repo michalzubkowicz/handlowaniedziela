@@ -1,0 +1,15 @@
+*fuse*
+/data/
+/public/files/
+/public/uploads/
+/nbproject/
+/.settings
+/.project
+*.kdev4
+/.idea/
+/application/doctrine/Proxies/__CG__*
+*.mp3
+*~
+node_modules
+bower_components
+*.iml
