@@ -71,7 +71,7 @@
     var currentDate = new Date().getDay() === 0 ? new Date() : nextSunday();
     var currentMonth = currentDate.getMonth() + 1 ;
     var currentDay = currentDate.getDate();
-    var dayOfWeek = currentDate.getDay();
+    var dayOfWeek = new Date().getDay();
 
     function setInfoText(t) {
         document.getElementById('infotext').innerHTML = t;
